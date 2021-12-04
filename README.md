@@ -1,3 +1,5 @@
+![TASC Modeler and xPACE logos](tasc-modeler-xpace.svg)
+
 # TASC Modeler
 
 The Task-specific Context Modeler (TASC  Modeler) is a context model generator that creates context models to support the elicitation of context-aware functionalities. It uses TASC4RE as language to represent context models.
