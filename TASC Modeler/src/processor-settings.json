@@ -1,4 +1,3 @@
 {
-    "SERVER_URL": "http://localhost:8080",
-    "CONTEXTUAL_DATA_PROCESSOR_NAME": "xPACE"
+    "SERVER_URL": "http://localhost:8080/xPACE/contexts"
   }

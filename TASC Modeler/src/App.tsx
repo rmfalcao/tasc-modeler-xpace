@@ -37,7 +37,7 @@ function App() {
     data.append("metadata", metadata);
     setIsGeneratingDiagram(true);
     // send description and csv files
-    await axios.post(`${configData.SERVER_URL}/${configData.CONTEXTUAL_DATA_PROCESSOR_NAME}/contexts?taskDescription=${description}`, data).then(response => {
+    await axios.post(`${configData.SERVER_URL}?taskDescription=${description}`, data).then(response => {
       setJSONDiagram(response.data)
       setIsGeneratingDiagram(false);
     });
