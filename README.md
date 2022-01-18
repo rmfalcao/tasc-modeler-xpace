@@ -31,3 +31,24 @@ The best way to build and run xPACE is using Docker:
 docker build -t xpace-image .
 docker run -p 8080:8080 xpace-image
 ```
+
+# Preparing the input data
+
+TASC Modeler and xPACE requires three input data in order to be able to trigger the data processing and generate the context model.
+
+- Task name: a simple text describing the name of the user task of interest. This text is used to name the user task in the context model to be generated. Example: "Create a comment".
+- Dataset: a CSV file containing the values of the contextual elements when the user task of interest was performed. The first line is a header. The column names are the IDs of the contextual elements.
+- Metadata: a CSV file describing characteristics of the contextual elements included in the dataset. The metadata file has 1 line for the header + N lines, where N corresponds to the number of contextual elements included in the dataset. The columns of the metadata file are described in the table below:
+
+| Attribute            | Description                                                                                                    | Type    | Values                                                     | Mandatory |
+|----------------------|----------------------------------------------------------------------------------------------------------------|---------|------------------------------------------------------------|-----------|
+| id                   | ID of the contextual element                                                                                   | String  | n/a                                                        |    yes    |
+| variable type        | Type of the contextual element                                                                                 | String  | "CATE"<br>(for categorical),<br>"CONT"<br>(for continuous) |    yes    |
+| is_always_analyzed   | Whether the contextual element should always be analyzed<br>by xPACE                                           | Boolean | true, false                                                |    yes    |
+| is_intrinsic         | Whether the contextual element characterizes an intrinsic<br>aspect of the object entity                       | Boolean | true, false                                                |    yes    |
+| minimize             | Whether xPACE should try to minimize the value of the<br>contextual element. Only for continuous variables     | Boolean | true, false                                                |     no    |
+| maximize             | Whether xPACE should try to maximize the value of the<br>contextual element. Only for continuous variables     | Boolean | true, false                                                |     no    |
+| template_description | Template for the description of a context instance of the<br>contextual element                                | String  | n/a                                                        |    yes    |
+| subtemplate_negative | For increasing the expressiveness of the description of<br>continuous variables when their values are negative | String  | n/a                                                        |     no    |
+| subtemplate_positive | For increasing the expressiveness of the description of<br>continuous variables when their values are positive | String  | n/a                                                        |     no    |
+| value_formatter      | Name of the xPACE formatting function that has to be<br>used to format the value of the contextual element     | String  | n/a                                                        |     no    |
