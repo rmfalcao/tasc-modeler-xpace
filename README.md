@@ -37,7 +37,7 @@ docker run -p 8080:8080 xpace-image
 TASC Modeler and xPACE requires three input data in order to be able to trigger the data processing and generate the context model.
 
 - Task name: a simple text describing the name of the user task of interest. This text is used to name the user task in the context model to be generated. Example: "Create a comment".
-- Dataset: a CSV file containing the values of the contextual elements when the user task of interest was performed. The first line is a header. The column names are the IDs of the contextual elements.
+- Dataset: a CSV file containing the values of the contextual elements when the user task of interest was performed. The first line is a header. The column names correspond to the IDs of the contextual elements.
 - Metadata: a CSV file describing characteristics of the contextual elements included in the dataset. The metadata file has 1 line for the header + N lines, where N corresponds to the number of contextual elements included in the dataset. The columns of the metadata file are described in the table below:
 
 | Attribute            | Description                                                                                                    | Type    | Values                                                     | Mandatory |
