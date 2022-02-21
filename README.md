@@ -10,14 +10,14 @@ TASC Modeler is responsible for creating the graphical representation of the con
 
 ## Getting started
 
-The best way to build and run TASC Modeler is using Docker:
+The best way to build and run TASC Modeler is using Docker. The Docker container for starting TASC Modeler requires approx. 600 MB of RAM.
 
 ```
 docker build -t tasc-modeler-image .
 docker run -p 3000:3000 tasc-modeler-image
 ```
 
-Then you can access the application at `http://localhost:3000`. Note that the configured contextual data processor must be active.
+You can access the application at `http://localhost:3000`. Note that the configured contextual data processor must be active.
 
 # xPACE
 
@@ -25,7 +25,7 @@ The eXtended Pairwise Analysis of Contextual Elements (xPACE) is a contextual da
 
 ## Getting started
 
-The best way to build and run xPACE is using Docker:
+The best way to build and run xPACE is using Docker. The Docker container for starting xPACE requires approx. 300 MB of RAM - note that more memory may be needed depending on the dataset size.
 
 ```
 docker build -t xpace-image .
