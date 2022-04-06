@@ -17,6 +17,16 @@ docker build -t tasc-modeler-image .
 docker run -p 3000:3000 tasc-modeler-image
 ```
 
+---
+**NOTE**
+
+If you are running Docker Desktop on Windows, you might need to active WSL 2 integration and use the following command to build the image:
+
+```
+DOCKER_BUILDKIT=0 docker build -t tasc-modeler-image .
+```
+---
+
 You can access the application at `http://localhost:3000`. Note that the configured contextual data processor must be active.
 
 # xPACE
@@ -31,6 +41,16 @@ The best way to build and run xPACE is using Docker. The Docker container for st
 docker build -t xpace-image .
 docker run -p 8080:8080 xpace-image
 ```
+
+---
+**NOTE**
+
+If you are running Docker Desktop on Windows, you might need to active WSL 2 integration and use the following command to build the image:
+
+```
+DOCKER_BUILDKIT=0 docker build -t xpace-image .
+```
+---
 
 # Preparing the input data
 
